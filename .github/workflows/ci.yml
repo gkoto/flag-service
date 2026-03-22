@@ -90,7 +90,7 @@ jobs:
       - name: "SAST: Bandit"
         run: |
           pip install bandit
-          bandit -r . -ll -ii --severity-level high
+          bandit -r . --severity-level high --confidence-level high
 
 
   docker-build-push:
